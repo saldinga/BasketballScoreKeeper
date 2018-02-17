@@ -183,7 +183,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        if (timerIsRunning) countTimer.cancel();
+        if (timerIsRunning) {
+            countTimer.cancel();
+            timerIsRunning = false;
+        }
         currentScoreA = 0;
         currentScoreB = 0;
         timeLeft = timeConst;
