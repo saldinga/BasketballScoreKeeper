@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.basketballscorekeeper.MainActivity">
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="00:00:00"
+        android:textSize="56sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/teamAName"
+        style="@style/teamName"
+        android:text="Team A"
+        app:layout_constraintEnd_toStartOf="@+id/middleVerticalGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+    <TextView
+        android:id="@+id/teamBName"
+        style="@style/teamName"
+        android:text="Team B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/middleVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/middleVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/teamAScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="56sp"
+        app:layout_constraintEnd_toStartOf="@+id/middleVerticalGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamAName" />
+
+    <TextView
+        android:id="@+id/teamBScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="56sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/middleVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/teamBName" />
+
+    <GridLayout
+        android:id="@+id/addAscoresGrid"
+        style="@style/gridScores"
+        app:layout_constraintEnd_toStartOf="@+id/middleVerticalGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamAScore">
+
+        <Button
+            style="@style/scoreButton"
+            android:onClick="addThreePoints"
+            android:tag="teamA"
+            android:text="+3" />
+
+        <Button
+            style="@style/scoreButton"
+            android:onClick="addTwoPoints"
+            android:tag="teamA"
+            android:text="+2" />
+
+        <Button
+            style="@style/scoreButton"
+            android:tag="teamA"
+            android:text="+1" />
+
+        <Button
+            style="@style/scoreButton"
+            android:tag="teamA"
+            android:text="-1" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/addBscoresGrid"
+        style="@style/gridScores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/middleVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/teamBScore">
+
+        <Button
+            style="@style/scoreButton"
+            android:text="+3" />
+
+        <Button
+            style="@style/scoreButton"
+            android:text="+2" />
+
+        <Button
+            style="@style/scoreButton"
+            android:text="+1" />
+
+        <Button
+            style="@style/scoreButton"
+            android:text="-1" />
+
+    </GridLayout>
+
+    <TableLayout
+        style="@style/tableHistory"
+        app:layout_constraintEnd_toStartOf="@+id/middleVerticalGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addAscoresGrid">
+
+        <TableRow>
+
+            <TextView
+                style="@style/tableHistoryText"
+                android:text="I" />
+
+            <TextView
+                style="@style/tableHistoryText"
+                android:text="II" />
+
+            <TextView
+                style="@style/tableHistoryText"
+                android:text="III" />
+
+            <TextView
+                style="@style/tableHistoryText"
+                android:text="IV" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/hq1_team_a"
+                style="@style/tableHistoryText"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/hq2_team_a"
+                style="@style/tableHistoryText"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/hq3_team_a"
+                style="@style/tableHistoryText"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/hq4_team_a"
+                style="@style/tableHistoryText"
+                android:text="0" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        style="@style/tableHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/middleVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/addBscoresGrid">
+
+        <TableRow>
+
+            <TextView
+                style="@style/tableHistoryText"
+                android:text="I" />
+
+            <TextView
+                style="@style/tableHistoryText"
+                android:text="II" />
+
+            <TextView
+                style="@style/tableHistoryText"
+                android:text="III" />
+
+            <TextView
+                style="@style/tableHistoryText"
+                android:text="IV" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/hq1_team_b"
+                style="@style/tableHistoryText"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/hq2_team_b"
+                style="@style/tableHistoryText"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/hq3_team_b"
+                style="@style/tableHistoryText"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/hq4_team_b"
+                style="@style/tableHistoryText"
+                android:text="0" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="316dp"
+        android:stretchColumns="*"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/resetTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:onClick="resetTime"
+                android:text="Reset Time" />
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Start" />
+
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pause" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="nextQuarter"
+                android:text="Next quarter" />
+
+            <Button
+                android:id="@+id/Undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:onClick="undo"
+                android:text="Undo" />
+
+            <Button
+                android:id="@+id/resetScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="reset"
+                android:text="New game" />
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

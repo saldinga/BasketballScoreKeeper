@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#33691e</item>
+        <item name="colorButtonNormal">#33691e</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#33691e</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="teamName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="scoreButton">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">#33691e</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="tableHistory">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:stretchColumns">*</item>
+    </style>
+
+    <style name="tableHistoryText">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="gridScores">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:columnCount">2</item>
+        <item name="android:useDefaultMargins">true</item>
+    </style>
+
+</resources>
